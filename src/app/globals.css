@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --breakpoint-998: 988px;
+  --breakpoint-1356: 1356px;
+  --breakpoint-668: 668px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@layer base {
+  body {
+    @apply min-h-[100vh];
+  }
+
+  main {
+    @apply min-h-[100vh];
+  }
+
+  img {
+    @apply rounded max-w-full size-[100vh] h-full object-cover grayscale transition;
+
+    &:hover {
+      @apply grayscale-0;
+    }
+  }
+}
