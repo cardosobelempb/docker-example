@@ -13,6 +13,8 @@ import img6 from "@/app/assets/images/image_6.jpg";
 import img7 from "@/app/assets/images/image_7.jpg";
 import img8 from "@/app/assets/images/image_8.jpg";
 
+/*sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4*/
+
 export default function GridPage() {
   return (
     <ContainerRoot className="bg-gradient-to-r from-[#232526] to-[#414345] text-white">
@@ -31,7 +33,7 @@ export default function GridPage() {
 
       <ContentRoot
         type="section"
-        className="gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        className="gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]"
       >
         <ImageRoot src={img1.src} />
         <ImageRoot src={img2.src} />
