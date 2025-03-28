@@ -1,6 +1,9 @@
 import { CardDecription } from "@/components/card-root/card-description";
 import { CardRoot } from "@/components/card-root/card.root";
 import { CardTitle } from "@/components/card-root/cart-title";
+import { HeadingRoot } from "@/components/heading-root/heading.root";
+import { ContainerRoot } from "@/components/layout-root/grid/container.root";
+import { ContentRoot } from "@/components/layout-root/grid/content.root";
 import { faker } from "@faker-js/faker";
 import { Star, ThumbsUp, User } from "lucide-react";
 
@@ -113,16 +116,16 @@ export default function GridPage() {
   ];
 
   return (
-    <>
-      <h1 className="text-3xl lg:text-4xl font-bold text-white">
+    <ContainerRoot className=" bg-orange-400">
+      <HeadingRoot type="h1" className="text-white">
         Most recent reviews
-      </h1>
+      </HeadingRoot>
 
-      <section className="flex flex-wrap gap-5">
+      <ContentRoot type="section" className=" gap-5">
         {reviews.map((review) => (
           <CardItem key={review.id} review={review} />
         ))}
-      </section>
-    </>
+      </ContentRoot>
+    </ContainerRoot>
   );
 }

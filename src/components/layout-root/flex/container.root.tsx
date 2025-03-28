@@ -9,7 +9,7 @@ export const ContainerRoot: React.FC<ContainerRootProps> = (props) => {
   return (
     <main
       {...props}
-      className={`flex flex-col gap-y-6 max-w-screen-2xl ${props.className}`}
+      className={`flex flex-col gap-y-6 md:gap-y-12 ${props.className}`}
     >
       {props.children}
     </main>

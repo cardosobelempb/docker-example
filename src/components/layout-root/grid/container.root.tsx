@@ -7,7 +7,7 @@ type ContainerRootProps = {
 
 export const ContainerRoot: React.FC<ContainerRootProps> = (props) => {
   return (
-    <main {...props} className={`${props.className}`}>
+    <main {...props} className={`grid gap-y-6 ${props.className}`}>
       {props.children}
     </main>
   );

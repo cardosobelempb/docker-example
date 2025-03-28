@@ -12,7 +12,7 @@ export default function FlexLayout({
 }>) {
   return (
     <>
-      <main className="bg-orange-400 gap-y-6">{children}</main>
+      <>{children}</>
     </>
   );
 }

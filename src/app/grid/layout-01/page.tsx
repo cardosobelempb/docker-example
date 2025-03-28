@@ -18,7 +18,7 @@ import img8 from "@/app/assets/images/image_8.jpg";
 export default function GridPage() {
   return (
     <ContainerRoot className="bg-gradient-to-r from-[#232526] to-[#414345] text-white">
-      <ContentRoot type="section">
+      <ContentRoot type="section" className="">
         <HeadingRoot
           type="h1"
           className="text-2xl font-bold sm:text-3xl xl:text-5xl"

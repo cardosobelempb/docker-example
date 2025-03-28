@@ -10,9 +10,5 @@ export default function FlexLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <>
-      <main className="bg-orange-400 gap-y-6">{children}</main>
-    </>
-  );
+  return <>{children}</>;
 }

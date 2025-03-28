@@ -28,7 +28,7 @@
   }
 
   main {
-    @apply min-h-[100vh];
+    @apply max-w-screen-2xl justify-center;
   }
 
   img {
