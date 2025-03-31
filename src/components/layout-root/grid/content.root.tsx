@@ -12,7 +12,7 @@ export const ContentRoot: React.FC<ContentRootProps> = (props) => {
         return (
           <section
             {...props}
-            className={`grid gap-y-4 justify-center ${props.className}`}
+            className={`max-w-screen-2xl mx-auto grid-cols-[repeat(auto-fit,minmax(300px,1fr))] ${props.className}`}
           >
             {props.children}
           </section>
@@ -21,7 +21,7 @@ export const ContentRoot: React.FC<ContentRootProps> = (props) => {
         return (
           <article
             {...props}
-            className={`grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] ${props.className}`}
+            className={`max-w-screen-2xl mx-auto grid-cols-[repeat(auto-fit,minmax(300px,1fr))]  ${props.className}`}
           >
             {props.children}
           </article>
@@ -31,7 +31,7 @@ export const ContentRoot: React.FC<ContentRootProps> = (props) => {
         return (
           <section
             {...props}
-            className={`grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] ${props.className}`}
+            className={`max-w-screen-2xl mx-auto grid-cols-[repeat(auto-fit,minmax(300px,1fr))]  ${props.className}`}
           >
             {props.children}
           </section>

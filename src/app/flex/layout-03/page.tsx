@@ -1,6 +1,6 @@
-import { CardDecription } from "@/components/card-root/card-description";
-import { CardRoot } from "@/components/card-root/card.root";
-import { CardTitle } from "@/components/card-root/cart-title";
+import { CardDecription } from "@/components/card-root/flex/card-description";
+import { CardRoot } from "@/components/card-root/flex/card.root";
+import { CardTitle } from "@/components/card-root/flex/cart-title";
 import { faker } from "@faker-js/faker";
 import { Star, ThumbsUp, User } from "lucide-react";
 

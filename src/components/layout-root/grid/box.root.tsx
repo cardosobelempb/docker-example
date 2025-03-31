@@ -7,7 +7,7 @@ type BoxRootProps = {
 
 export const BoxRoot: React.FC<BoxRootProps> = (props) => {
   return (
-    <div {...props} className={`grid w-full ${props.className}`}>
+    <div {...props} className={`rounded ${props.className}`}>
       {props.children}
     </div>
   );
