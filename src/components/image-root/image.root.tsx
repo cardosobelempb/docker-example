@@ -2,17 +2,23 @@
 
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
+import { ReactNode } from "react";
 
 type ImageRootProps = {
-  className?: string;
+  classImage?: string;
+  classFigure?: string;
+  classCaption?: string;
   src: string | StaticImport;
+  isCaption?: boolean;
+  captionTitle?: string;
+  children?: ReactNode;
 };
 
 export const ImageRoot: React.FC<ImageRootProps> = (props) => {
   return (
-    <figure>
+    <figure className={props.classFigure}>
       <Image
-        {...props}
+        className={props.classImage}
         src={props.src}
         alt=""
         width={0}
@@ -20,6 +26,14 @@ export const ImageRoot: React.FC<ImageRootProps> = (props) => {
         sizes="100vw"
         priority
       />
+      {props.isCaption && (
+        <>
+          <figcaption className={props.classCaption}>
+            {props.children}
+            {props.captionTitle}
+          </figcaption>
+        </>
+      )}
     </figure>
   );
 };

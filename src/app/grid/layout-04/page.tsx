@@ -8,34 +8,34 @@ import Img03 from "./images/image_3.jpg";
 import { HeadingRoot } from "@/components/heading-root/heading.root";
 import { ParagraphRoot } from "@/components/paragraph-root/paragraph.root";
 import { BoxRoot } from "@/components/layout-root/grid/box.root";
+import { ArticleRoot } from "@/components/article-root/article.root";
 
 export default function GridPage() {
   return (
-    <ContainerRoot className="bg-sky-900 text-white">
-      <ContentRoot
-        type="section"
-        className="*:text-center flex-col lg:w-3/4 mx-auto -space-y-4"
-      >
-        <HeadingRoot className="text-purple-400" type="h6">
-          Testimonials
-        </HeadingRoot>
-        <HeadingRoot type="h1">What our clients say</HeadingRoot>
-        <ParagraphRoot>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam fuga,
-          eligendi obcaecati blanditiis, earum ab nisi beatae dolorem ipsum quod
-          odio. Quasi, a? Iure tempore nam debitis reiciendis, corporis
-          cupiditate.
-        </ParagraphRoot>
+    <ContainerRoot className="bg-sky-900 text-white py-3">
+      <ContentRoot type="section" className="py-5">
+        <BoxRoot className="grid gap-y-5 *:text-center">
+          <HeadingRoot className="text-purple-400" type="h6">
+            Testimonials
+          </HeadingRoot>
+          <HeadingRoot type="h1">What our clients say</HeadingRoot>
+          <ParagraphRoot>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
+            fuga, eligendi obcaecati blanditiis, earum ab nisi beatae dolorem
+            ipsum quod odio. Quasi, a? Iure tempore nam debitis reiciendis,
+            corporis cupiditate.
+          </ParagraphRoot>
+        </BoxRoot>
       </ContentRoot>
-      <ContentRoot type="section">
-        <BoxRoot className="p-8 gap-y-4 border border-blue-300 ">
-          <div className="flex gap-0.5">
+      <ContentRoot type="section" className="grid gap-2.5">
+        <ArticleRoot className="grid p-8 gap-y-4 border border-blue-300 rounded">
+          <BoxRoot className="flex gap-0.5">
             <Star className="text-orange-400 w-4 h-4 fill-orange-400" />
             <Star className="text-orange-400 w-4 h-4 fill-orange-400" />
             <Star className="text-orange-400 w-4 h-4 fill-orange-400" />
             <Star className="text-orange-400 w-4 h-4 fill-orange-400" />
             <Star className="text-gray-400 w-4 h-4 fill-gray-400" />
-          </div>
+          </BoxRoot>
 
           <ParagraphRoot>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui odio
@@ -43,22 +43,27 @@ export default function GridPage() {
             possimus eaque, minima recusandae consectetur animi enim ad.
           </ParagraphRoot>
 
-          <div className="flex gap-x-5">
-            <ImageRoot className="w-12 h-12 rounded-full" src={Img01.src} />
-            <div>
+          <BoxRoot className="grid">
+            <ImageRoot
+              classFigure="col-start-1 col-end-2 row-start-1 row-end-2  w-12 h-12 rounded-full"
+              classImage="rounded-full"
+              src={Img01.src}
+            />
+
+            <BoxRoot className="ml-16 col-start-1 col-end-2 row-span-1 row-end-2">
               <HeadingRoot type="h5">Jane Doe</HeadingRoot>
               <span>Founder LAL</span>
-            </div>
-          </div>
-        </BoxRoot>
-        <BoxRoot className="p-8 space-y-4 border border-blue-300">
-          <div className="flex gap-0.5">
+            </BoxRoot>
+          </BoxRoot>
+        </ArticleRoot>
+        <ArticleRoot className="grid p-8 space-y-4 border border-blue-300 rounded">
+          <BoxRoot className="flex gap-0.5">
             <Star className="text-orange-400 w-4 h-4 fill-orange-400" />
             <Star className="text-orange-400 w-4 h-4 fill-orange-400" />
             <Star className="text-orange-400 w-4 h-4 fill-orange-400" />
             <Star className="text-orange-400 w-4 h-4 fill-orange-400" />
             <Star className="text-gray-400 w-4 h-4 fill-gray-400" />
-          </div>
+          </BoxRoot>
 
           <ParagraphRoot>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui odio
@@ -66,22 +71,26 @@ export default function GridPage() {
             possimus eaque, minima recusandae consectetur animi enim ad.
           </ParagraphRoot>
 
-          <div className="flex gap-x-5">
-            <ImageRoot className="w-12 h-12 rounded-full" src={Img02.src} />
-            <div>
+          <BoxRoot className="grid">
+            <ImageRoot
+              classFigure="col-start-1 col-end-2 row-start-1 row-end-2 w-12 h-12 rounded-full"
+              classImage="rounded-full"
+              src={Img02.src}
+            />
+            <BoxRoot className="ml-16 col-start-1 col-end-2 row-span-1 row-end-2">
               <HeadingRoot type="h5">Jane Doe</HeadingRoot>
               <span>Founder LAL</span>
-            </div>
-          </div>
-        </BoxRoot>
-        <BoxRoot className="p-8 gap-y-4 border border-blue-300">
-          <div className="flex gap-0.5">
+            </BoxRoot>
+          </BoxRoot>
+        </ArticleRoot>
+        <ArticleRoot className="grid p-8 gap-y-4 border border-blue-300 rounded">
+          <BoxRoot className="flex gap-0.5">
             <Star className="text-orange-400 w-4 h-4 fill-orange-400" />
             <Star className="text-orange-400 w-4 h-4 fill-orange-400" />
             <Star className="text-orange-400 w-4 h-4 fill-orange-400" />
             <Star className="text-orange-400 w-4 h-4 fill-orange-400" />
             <Star className="text-gray-400 w-4 h-4 fill-gray-400" />
-          </div>
+          </BoxRoot>
 
           <ParagraphRoot>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui odio
@@ -89,14 +98,18 @@ export default function GridPage() {
             possimus eaque, minima recusandae consectetur animi enim ad.
           </ParagraphRoot>
 
-          <div className="flex gap-x-5">
-            <ImageRoot className="w-12 h-12 rounded-full" src={Img03.src} />
-            <div>
+          <BoxRoot className="grid">
+            <ImageRoot
+              classFigure="col-start-1 col-end-2 row-start-1 row-end-2 w-12 h-12 rounded-full"
+              classImage="rounded-full"
+              src={Img03.src}
+            />
+            <BoxRoot className="ml-16 col-start-1 col-end-2 row-span-1 row-end-2">
               <HeadingRoot type="h5">Jane Doe</HeadingRoot>
               <span>Founder LAL</span>
-            </div>
-          </div>
-        </BoxRoot>
+            </BoxRoot>
+          </BoxRoot>
+        </ArticleRoot>
       </ContentRoot>
     </ContainerRoot>
   );

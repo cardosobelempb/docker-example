@@ -7,7 +7,7 @@ type BoxRootProps = {
 
 export const BoxRoot: React.FC<BoxRootProps> = (props) => {
   return (
-    <div {...props} className={`rounded ${props.className}`}>
+    <div {...props} className={`${props.className}`}>
       {props.children}
     </div>
   );
