@@ -3,25 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --color-primary: 0deg 0% 14%;
-  --color-secondary: 0deg 0% 18%;
-  --color-accent: 3deg 74% 65%;
-  --color-text: 0deg 0% 100%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --breakpoint-998: 988px;
-  --breakpoint-1356: 1356px;
-  --breakpoint-668: 668px;
-  --primary: hsl(var(--color-primary) / <alpha-value>);
-  --secondary: hsl(var(--color-secondary) / <alpha-value>);
-  --accent: hsl(var(--color-accent) / <alpha-value>);
-  --text: hsl(var(--color-text) / <alpha-value>);
-}
+/* [data-theme="dark"] {
+  --color-primary: hsl(0deg 0% 14%);
+  --color-secondary: hsl(0deg 0% 18%);
+  --color-accent: hsl(3deg 74% 65%);
+  --color-text: hsl(0deg 0% 100%);
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -30,14 +19,25 @@
   }
 }
 
-@layer base {
-  body {
-    @apply min-h-[100vh];
-  }
+@theme {
+  --color-primary: hsl(0deg 0% 14%);
+  --color-secondary: hsl(0deg 0% 18%);
+  --color-accent: hsl(3deg 74% 65%);
+  --color-text: hsl(0deg 0% 100%);
+}
 
-  main {
-    @apply w-full min-h-[100vh];
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+@layer base {
+  html {
+    @apply 2xl:max-w-screen-2xl 2xl:mx-auto 2xl:bg-primary;
   }
+  /* body {
+    @apply min-h-[100vh];
+  } */
+
+  /* main {
+    @apply w-full min-h-[100vh];
+  }*/
 
   img {
     @apply rounded max-w-full size-[100vh] h-full object-cover grayscale transition;
@@ -50,11 +50,7 @@
 
 @layer components {
   .nav {
-    @apply flex flex-col gap-6 fixed rounded top-0 right-0 bg-accent/40 backdrop-blur-lg p-24 z-20 scale-y-0 origin-bottom transition-transform duration-300;
-  }
-
-  .nav.open {
-    @apply scale-y-100 origin-top;
+    @apply flex flex-col gap-6 fixed rounded top-0 right-0 bg-accent/40 backdrop-blur-lg p-24 z-20 origin-bottom transition-transform duration-300;
   }
 
   .nav--link {
@@ -62,10 +58,12 @@
   }
 
   .hamburger {
-    @apply fixed bg-accent py-5 top-[30px] right-2/4 translate-x-2/4 h-8 w-12 z-30 rounded cursor-pointer before:content-[''] before:h-0.5 before:w-2/3 before:bg-text before:absolute before:top-4 before:left-2 after:content-[''] after:h-0.5 after:w-1/3 after:bg-text after:absolute after:top-6 after:left-2 before:transition after:transition;
+    @apply fixed bg-accent py-5 top-[24px] right-2/4 translate-x-2/4 h-8 w-12 z-30 rounded cursor-pointer before:content-[''] before:h-0.5 before:w-2/3 before:bg-text before:absolute before:top-4 before:left-2 after:content-[''] after:h-0.5 after:w-1/3 after:bg-text after:absolute after:top-6 after:left-2 before:transition after:transition;
   }
-
-  .hamburger.close {
+  .open {
+    @apply scale-y-100 origin-top;
+  }
+  .close {
     @apply before:rotate-45 before:translate-y-1 after:w-2/3 after:-rotate-45 after:-translate-y-1;
   }
 

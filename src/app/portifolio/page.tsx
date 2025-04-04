@@ -1,10 +1,4 @@
-import {
-  Facebook,
-  Twitter,
-  Dribbble,
-  Youtube,
-  ChevronRight,
-} from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 import {
   abount,
@@ -28,76 +22,16 @@ import {
   service2,
   service3,
   service4,
-  showcase,
   skills,
   testimonial,
 } from "@/app/assets/images/portifolio";
 import { ImageRoot } from "@/components/image-root/image.root";
+import PortfolioHeader from "@/components/protfolio/portfolio-header/portfolio-header";
 
 export default function PortfolioPage() {
   return (
     <>
-      <header>
-        <nav>
-          <a href="#">JD</a>
-
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">about</a>
-            </li>
-            <li>
-              <a href="#">Services</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-
-          <div></div>
-
-          <a href="#">Book Now</a>
-        </nav>
-
-        <section>
-          <div>
-            <div>
-              <h6>Professional Photographer</h6>
-              <h1>John Doe</h1>
-            </div>
-
-            <div>
-              <ul>
-                <li>
-                  <Facebook />
-                </li>
-                <li>
-                  <Twitter />
-                </li>
-                <li>
-                  <Dribbble />
-                </li>
-                <li>
-                  <Youtube />
-                </li>
-              </ul>
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque sodales at nunc quis semper. Class aptent taciti
-                sociosqu ad litora torquent per conubia nostra, per inceptos
-                himenaeos. Fusce
-              </p>
-
-              <a href="#">View Portfolio</a>
-            </div>
-          </div>
-
-          <ImageRoot src={showcase.src} />
-        </section>
-      </header>
+      <PortfolioHeader />
 
       <main>
         {/* <!-- *-*-*-*-*-*-*-*-*-*-*-*-* Motto --> */}
